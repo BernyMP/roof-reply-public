@@ -10,7 +10,8 @@ export function kitPlainText(value: string) {
 
 export function generateRescueKit() {
   const doc = new jsPDF({ unit: "mm", format: "letter", compress: true, putOnlyUsedFonts: true });
-  doc.setCreationDate(new Date("2026-10-13T12:00:00Z"));
+  // A PDF date string preserves identical metadata across local and CI time zones.
+  doc.setCreationDate("D:20261013120000+00'00'");
   doc.setFileId("524F4F465245504C5952455343554531");
   doc.setProperties({ title: KIT_TITLE, subject: KIT_PROMISE, author: "RoofReply" });
   for (const [file, data, face, style] of [
