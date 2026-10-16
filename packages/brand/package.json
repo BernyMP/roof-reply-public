@@ -1,0 +1,16 @@
+{
+  "name": "@roofreply/brand",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./marketing": "./src/marketing-copy.ts",
+    "./pricing": "./src/pricing-copy.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}

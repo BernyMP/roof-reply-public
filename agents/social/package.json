@@ -1,0 +1,39 @@
+{
+  "name": "@roofreply/social-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./config": "./src/social-config.ts",
+    "./content": "./src/social-content.ts",
+    "./library": "./src/social-library.ts",
+    "./ai": "./src/social-ai.ts",
+    "./buffer": "./src/buffer.ts",
+    "./image": "./src/social-image.ts",
+    "./graphic": "./src/social-graphic.tsx",
+    "./agent-contract": "./src/social-agent.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --test --experimental-strip-types \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "4.0.69",
+    "@clerk/nextjs": "^6.39.3",
+    "@roofreply/brand": "0.1.0",
+    "ai": "7.0.104",
+    "convex": "^1.30.0",
+    "react-dom": "^19.2.6",
+    "zod": "3.25.76"
+  },
+  "peerDependencies": {
+    "next": "^16.2.6",
+    "react": "^19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "tsx": "^4.23.13",
+    "typescript": "^5"
+  }
+}
